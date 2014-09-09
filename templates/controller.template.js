@@ -1,7 +1,3 @@
-<%
-
-var SailsBackbone = require('sails-backbone');
-
 /**
  * @module <%= entity %>
  */
@@ -22,5 +18,3 @@ module.exports = {
       .catch(req.error);
   }
 };
-
-%>

@@ -28,7 +28,7 @@
     "fs-extra": "*"
   },
   "sailsGenerator": {
-    "type": "backbone-api",
+    "type": "controller",
     "behavior": "Generate a Backbone API for a Sails application",
     "sailsVersion": ">= 0.10.0"
   }

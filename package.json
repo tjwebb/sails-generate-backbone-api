@@ -1,24 +1,26 @@
 {
-  "name": "sails-generate-controller",
-  "version": "0.10.7",
-  "description": "Generate a controller for Sails.",
+  "name": "sails-generate-backbone-api",
+  "version": "0.10.0",
+  "description": "Generate a Backbone API for a Sails application",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --reporter spec"
   },
   "keywords": [
-    "controller",
-    "generator",
     "sails",
+    "sails.js",
+    "backbone",
+    "backbone.js",
+    "api",
+    "generator",
     "generate",
     "plugin"
   ],
-  "author": "balderdashy",
+  "author": "Travis Webb <me@traviswebb.com>",
   "license": "MIT",
   "dependencies": {
     "lodash": ">=2.4.x",
     "merge-defaults": ">=0.1.0",
-    "pluralize": "0.0.9",
     "sails-generate-hook": "0.0.1",
     "underscore.string": "~2.3.3"
   },
@@ -28,8 +30,8 @@
     "fs-extra": "*"
   },
   "sailsGenerator": {
-    "type": "controller",
-    "behavior": "overrides `sails generate controller`",
-    "sailsVersion": "~0.10.0"
+    "type": "backbone-api",
+    "behavior": "Generate a Backbone API for a Sails application",
+    "sailsVersion": ">= 0.10.0"
   }
 }

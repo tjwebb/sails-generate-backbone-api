@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - '0.10'
+  - '0.11'
+
+notifications:
+  email: false
+
+deploy:
+  provider: npm
+  email: me@traviswebb.com
+  api_key:
+    secure: apBFrBp6tAGQEfp8pjw5StGpOzqr3MbGDw8vD45IxrZzd5KYriaWn3PluIC6G5rkLyRadtEvEqEVbRSyvjadW+6u8lxOp8dKAKIalFBrWHg9xu+Dvd0LkkqKOojQ7hgKSEt0mcTpqvr3s8wgJsm8zp74NKEF01iwpJiPrjTZVCI=
+  on:
+    tags: true
+    repo: tjwebb/sails-generate-backbone-api
+    all_branches: true

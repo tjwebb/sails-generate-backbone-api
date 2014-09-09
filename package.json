@@ -1,6 +1,6 @@
 {
   "name": "sails-generate-backbone-api",
-  "version": "0.10.11",
+  "version": "0.10.12",
   "description": "Generate a Backbone API for a Sails application",
   "main": "lib/index.js",
   "scripts": {

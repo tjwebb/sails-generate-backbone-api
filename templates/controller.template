@@ -1,28 +1,26 @@
-<% /*
- *                 A set of functions called `actions`.
- *
- *                 Actions contain code telling Sails how to respond to a certain type of request.
- *                 (i.e. do stuff, then send some JSON, show an HTML page, or redirect to another URL)
- *
- *                 You can configure the blueprint URLs which trigger these actions (`config/controllers.js`)
- *                 and/or override them with custom routes (`config/routes.js`)
- *
- *                 NOTE: The code you write here supports both HTTP and Socket.io automatically. */%><% if (lang === 'js') { %>/**
- * <%= entity %>
- *
- * @description :: Server-side logic for managing <%= resourcePlural %>
- * @help        :: See http://links.sailsjs.org/docs/controllers
+<%
+
+var SailsBackbone = require('sails-backbone');
+
+/**
+ * @module <%= entity %>
  */
 
 module.exports = {
-	<%- actionFns %>
+
+  /**
+   * Return ordered list of Backbone.js Models. This output can be fed into
+   * SailsBackbone.parse().
+   *
+   * @see <https://github.com/tjwebb/sails-backbone#browser-client>
+   */
+  index: function (req, res) {
+    BackboneApi.find({ sort: 'index ASC', limit: 999 })
+      .then(function (models) {
+        res.json(models);
+      })
+      .catch(req.error);
+  }
 };
-<% } else if (lang === 'coffee') { %> # <%= entity %>
- #
- # @description :: Server-side logic for managing <%= resourcePlural %>
- # @help        :: See http://links.sailsjs.org/docs/controllers
-<% if (actionFns.length > 0) { %>
-module.exports =
-	<%- actionFns %>
-<%} else { %>
-module.exports = {}<%}%><%}%>
+
+%>

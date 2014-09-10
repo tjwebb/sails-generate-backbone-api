@@ -2,7 +2,7 @@
   "name": "sails-generate-backbone-api",
   "version": "0.11.1",
   "description": "Generate a Backbone API for a Sails application",
-  "main": "lib/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "mocha --reporter spec"
   },

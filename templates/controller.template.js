@@ -1,20 +1,18 @@
-/**
- * @module <%= entity %>
- */
+var _ = require('lodash');
 
-module.exports = {
+ParentController = require('sails-backbone/api/controllers/BackboneModelController');
+
+_.extend(exports, ParentController);
+_.extend(exports, {
 
   /**
-   * Return ordered list of Backbone.js Models. This output can be fed into
-   * SailsBackbone.parse().
+   * Custom override logic goes in here. For example:
    *
-   * @see <https://github.com/tjwebb/sails-backbone#browser-client>
+   * find: function (req, res) {
+   *   req.param.limit = 10;
+   *   ParentController.find(req, res);
+   * }
+   *
    */
-  index: function (req, res) {
-    BackboneApi.find({ sort: 'index ASC', limit: 999 })
-      .then(function (models) {
-        res.json(models);
-      })
-      .catch(req.error);
-  }
-};
+
+});

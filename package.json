@@ -32,5 +32,13 @@
     "type": "controller",
     "behavior": "Generate a Backbone API for a Sails application",
     "sailsVersion": ">= 0.10.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tjwebb/sails-generate-backbone-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tjwebb/sails-generate-backbone-api/issues"
+  },
+  "homepage": "https://github.com/tjwebb/sails-generate-backbone-api"
 }
